@@ -1,0 +1,85 @@
+//// DISPLAY STYLINGS
+@mixin blockRel {
+    display: block !important;
+    position: relative;
+}
+@mixin blockAb {
+    display: block !important;
+    position: absolute;
+}
+@mixin blockFix {
+    display: block !important;
+    position: fixed;
+}
+@mixin inlineRel {
+    display: inline-block !important;
+    position: relative;
+}
+@mixin rounded {
+    border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+    overflow: hidden;
+}
+
+
+
+//// PRESENTATIONAL
+@mixin round {
+    border-radius: 1000px;
+        -moz-border-radius: 1000px;
+        -webkit-border-radius: 1000px;
+    overflow: hidden;
+}
+
+
+////TRANSITIONS
+@mixin transOne {
+    transition: .1s all;
+        -moz-transition: .1s all;
+        -webkit-transition: .1s all;
+        -ms-transition: .1s all;
+}
+@mixin transTwo {
+    transition: .3s all;
+        -moz-transition: .3s all;
+        -webkit-transition: .3s all;
+        -ms-transition: .3s all;
+    transition-delay: .3s;
+        -moz-transition-delay: .3s;
+        -webkit-transition-delay: .3s;
+        -ms-transition-delay: .3s;
+}
+@mixin transThree {
+    transition: .3s all;
+        -moz-transition: .3s all;
+        -webkit-transition: .3s all;
+        -ms-transition: .3s all;
+}
+
+
+//// FUNCTIONS
+@mixin calc($property, $value) {
+  #{$property}: -webkit-calc(#{$value});
+  #{$property}:         calc(#{$value});
+}
+
+@mixin boxShadow($shadows...) {
+-moz-box-shadow: $shadows;
+-webkit-box-shadow: $shadows;
+box-shadow: $shadows;
+}
+
+@mixin transition($transition...) {
+-webkit-transition: $transition;
+-moz-transition: $transition;
+-o-transition: $transition;
+transition: $transition;
+}
+
+@mixin backgroundSize($size) {
+-webkit-background-size: $size;
+-moz-background-size: $size;
+-o-background-size: $size;
+background-size: $size;
+}

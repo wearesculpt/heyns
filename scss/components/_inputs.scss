@@ -1,0 +1,23 @@
+input {
+    @include blockRel;
+    @include transOne;
+    
+    background-color: $gray10;
+    border: 2px solid $gray20;
+    font-family: $font-default;
+    margin: 1rem 0rem !important;
+    outline: 0px;
+    padding: 1rem 1rem !important;
+    
+    &:focus {
+        border: 2px solid $gray40;
+        box-shadow: 0 0 2px lighten($gray, 10%);
+    }
+}
+input[type="submit"] {
+    @extend %button;
+    
+    &:focus {
+        border: 0px solid $gray20;
+    }
+}

@@ -1,0 +1,84 @@
+%button {
+    @include inlineRel;
+    @include h4;
+    @include transOne;
+    
+    color: white;
+    background-color: $primaryColor;
+    border: 0px solid white;
+    font-weight: 900;
+    font-family: $font-default;
+    margin: 0rem 0rem;
+    padding: 15px 25px 18px;
+    text-align: center;
+    outline: none;
+    
+    a {
+        text-decoration: none; 
+    }
+    
+    &:hover {
+        @include transOne;
+    }
+}
+
+button {
+    @extend %button;
+    
+    text-decoration: none;
+}
+.button--sm {
+    @extend %button;
+    @include h5;
+    
+    padding: 5px 10px;
+    
+    a {
+        font-weight: 100;
+    }
+}
+.button--med {
+    @extend %button;
+    @include h4;
+    
+    font-weight: 900;
+    padding: 10px 18px;
+    
+    a {
+        font-weight: 100;
+    }
+}
+.button--lg {
+    @extend %button;
+    @include h3;
+    
+    font-weight: 900;
+}
+.button--xl {
+    @extend %button;
+    @include h2;
+    
+    padding: 15px 28px;
+}
+.button--invert {
+    background-color: $secondaryColor;
+    color: white;
+    border: 4px solid $secondaryColor;
+    
+    &:hover {
+        border: 4px solid white;
+        background-color: white;
+        color: $secondaryColor;
+    }
+}
+.button--ghost {
+    border: 0px;
+    
+    &:hover {
+        border: 0px;
+        background-color: darken($primaryColor,5%);
+    }
+}
+.button--alt {
+    background-color: darken($primaryColor,10%);
+}

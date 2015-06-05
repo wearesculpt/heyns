@@ -1,0 +1,228 @@
+/* TYPOGRAPHICAL SCALE */
+html, body {
+    font-size: 50%;
+}
+
+// BEGIN STYLES HERE
+.directionalAnchor {
+    @include blockAb;
+    
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    
+    i {
+        @include inlineRel;
+        
+        color: white;
+        font-size: 4rem;
+    }
+}
+
+
+// HEADER
+.preHeader {
+    background-color: $primaryColor;
+    height: 0px;
+    overflow: hidden;
+    padding: 0px 0px;
+    
+    h4 {
+        color: white;
+    }
+}
+.preHeader.visible {
+    height: 60px;
+    padding: 10px 0px;
+}
+
+header {
+    background-color: white;
+    max-height: 60px;
+    padding: 0px 0px !important;
+    position: absolute !important;
+    right: 0px;
+    top: 0px;
+    z-index: 1000;
+    
+    .header {
+        height: 60px;
+        background-color: white;
+    }
+}
+.mainLogo {
+    @include blockRel;
+    
+    background-color: white;
+    background-image: url('resources/images/heyns_logo_full.jpg');
+    background-size: contain;
+    background-position: center;
+    border: 8px solid $primaryColor;
+    border-radius: 1000px;
+    height: 90px;
+    margin: 20px 30px;
+    width: 90px;
+    z-index: 0;
+}
+.mainMenu {
+    @include blockAb;
+    @include transThree;
+    
+    background-color: $primaryColor;
+    overflow: hidden;
+    padding: 70px 0px 0px;
+    top: -360px;
+    right: 0px;
+    text-align: right;
+    width: 100%;
+    z-index:1;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+    
+    li {
+        padding: 20px 0px;
+        text-align: center;
+        
+        a {
+            @include h4;
+            
+            color: $black;
+            font-family: $font-default;
+        }
+    }
+    li.current_page_item {
+        a {
+            color: white;
+        }
+    }
+}
+.mainMenu--visible {
+    top: -60px;
+}
+.js-menuToggle {
+    @include blockAb;
+    
+    cursor: pointer;
+    font-size: 3rem;
+    margin: 15px 30px;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+}
+
+////MAIN
+.lede {
+    font-size: 8rem;
+    line-height: 1;
+    text-shadow: 0px 0px 5px $gray40;
+}
+
+.barSep {
+    @include blockRel;
+    
+    background-color: $secondaryColor;
+    height: 20px;
+}
+
+// QUOTE
+.quoteSection {
+    background-color: $secondaryColor;
+    padding: 100px 0px;
+    
+    span {
+        color: white;
+        line-height: 0px;
+    }
+    .column {
+        margin-bottom: 0px;
+    }
+    h1 {
+        font-size: 4.8rem;
+    }
+}
+
+//BODY
+.sectionHead {
+    background-color: $primaryColor;
+}
+figure {
+    margin-bottom: 2.5rem;
+}
+
+//FLAVORS
+.flavors {
+    column-fill: balance;
+    font-size: 0rem; //removes whitespace issues
+    
+    .flavor {
+        
+        p {
+            font-size: 1.8rem;
+        }
+        
+        -webkit-column-break-inside:avoid;
+        -moz-column-break-inside:avoid;
+        -o-column-break-inside:avoid;
+        -ms-column-break-inside:avoid;
+        column-break-inside:avoid;
+    }   
+}
+
+// CONTACT
+.contactMap {
+    height: 250px;
+    margin-bottom: 60px;
+}
+
+//FOOTER 
+footer {
+    background-color: $tertiaryColor;
+    padding: 50px 0px 30px !important;
+    
+    .column {   
+        margin-bottom: 20px;
+        
+        h3, h4, i {
+            color: white;
+        }
+        a {
+            color: white;
+            font-weight: 100;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.fourOhFour {
+    display: block;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('resources/images/1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .centerContent {
+        display: block;
+        position: absolute;
+        top: 200px;
+        left: calc(50% - 150px);
+        width: 300px;
+        text-align: center;
+
+        .button {
+            display: inline-block;
+        }
+
+        h1 {
+            color: white;
+        }
+    }
+}

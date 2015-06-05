@@ -1,0 +1,84 @@
+//// OUTERMOST GRID WRAPPER
+.container {
+    @include blockRel;
+    
+    padding: $outerContainer--padding;
+    width: $outerContainer;
+}
+
+//// GRID BLOCK WRAPPER
+.row {
+    @include blockRel;
+    
+    margin: auto;
+    max-width: $maxRow;
+    text-align: justify;
+    width: $row;
+    
+    &::after {
+        @include inlineRel;
+        
+        content:'';
+        width: 100%;
+    }
+}
+
+//// FULL WIDTH BLOCK WRAPPER
+.row--fullWidth {
+    max-width: 100%;
+    width: 100%;
+}
+
+//// GRID BLOCK
+.column {
+    @include inlineRel;
+    
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: calc(#{$gutter}/2);
+    text-align: left;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* removes inline grid styles for _grid--float.scss full bleed grid */
+.row--float .column {
+    @include blockRel;
+    
+    float: left;
+    margin-bottom: 0px;
+}
+
+
+/* Vertical align inline-block within a container */
+@mixin u-verticalAlign--middle {
+    height: 100% !important;
+    font-size: 0px;
+    
+    & > * {
+        font-size: 1rem;
+        vertical-align: middle;
+    }
+    
+    &::after {
+        @include inlineRel;
+        
+        content:'';
+        height: 50%;
+        font-size: 0px;
+        width: 0px;
+    }
+}
+.u-verticalAlign--middle {
+    @include u-verticalAlign--middle;
+}
+.u-verticalAlign-top {
+    vertical-align: top;
+    
+    & > .column {
+        vertical-align: top;
+    }
+}

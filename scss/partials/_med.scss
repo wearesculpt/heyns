@@ -1,0 +1,67 @@
+/* Typographical Scale */
+html, body {
+    font-size: 62.5%;
+}
+
+// BEGIN STYLES HERE
+.container--padded {
+    padding: 120px 0px 80px;
+}
+
+//HEADER
+.preHeader.visible {
+    height: 60px;
+    padding: 15px 0px;
+}
+
+.mainMenu {
+    @include blockRel;
+    @include transThree;
+    
+    background-color: rgba(255,255,255,0);
+    float: right;
+    overflow: hidden;
+    padding: 8px 0px 0px;
+    top: 0px;
+    right: 0px;
+    width: 75%;
+    z-index:1;
+    
+    li {
+        @include inlineRel;
+        
+        padding: 10px 0px;
+        text-align: center;
+        width: 30%;
+        
+        a {
+            @include h4;
+            
+            color: $black;
+            font-family: $font-default;
+        }
+    }
+    li.current_page_item {
+        a {
+            color: $primaryColor;
+        }
+    }
+}
+.mainMenu--visible {
+    top: 0px;
+}
+.js-menuToggle {
+    display: none !important;
+}
+
+
+// QUOTE
+.quoteSection {
+    padding: 160px 0px;
+}
+
+// CONTACT
+.contactMap {
+    height: 400px;
+    margin-bottom: 60px;
+}
