@@ -34,44 +34,47 @@
     </div>
 </section>
 
-<section class="sectionHead container">
-    <div class="row sm_u-centerAlign font--white">
-        <h2>• Our Flavors •</h2>
-        <p><?php the_field('flavors_copy'); ?></p>
-        <p class="italic"><?php the_field('featured_deal'); ?></p>
-        <div class="button button--lg button--alt"><?php the_field('featured_flavor'); ?></div>
-    </div>
-</section>
-<section class="container">
-    <div class="row">
-        <div class="flavors column med_threeCol med_u-centerAlign">
-            <?php
+<?php if (the_field('show_flavors') == true): ?>
 
-                // check if the flexible content field has rows of data
-                if( have_rows('flavors') ):
-
-                     // loop through the rows of data
-                    while ( have_rows('flavors') ) : the_row(); ?>
-
-                            <div class="flavor">
-                                <h4><?php the_sub_field('flavor_title'); ?></h4>
-                                <p class="p0"><?php the_sub_field('flavor_description'); ?></p>
-                            </div>
-                            <br/>
-
-                    <? endwhile;
-
-                else :
-
-                    // no layouts found
-
-                endif;
-
-                ?>
-
+    <section class="sectionHead container">
+        <div class="row sm_u-centerAlign font--white">
+            <h2>• Our Flavors •</h2>
+            <p><?php the_field('flavors_copy'); ?></p>
+            <p class="italic"><?php the_field('featured_deal'); ?></p>
+            <div class="button button--lg button--alt"><?php the_field('featured_flavor'); ?></div>
         </div>
-    </div>
-</section>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="flavors column med_threeCol med_u-centerAlign">
+                <?php
+
+                    // check if the flexible content field has rows of data
+                    if( have_rows('flavors') ):
+
+                         // loop through the rows of data
+                        while ( have_rows('flavors') ) : the_row(); ?>
+
+                                <div class="flavor">
+                                    <h4><?php the_sub_field('flavor_title'); ?></h4>
+                                    <p class="p0"><?php the_sub_field('flavor_description'); ?></p>
+                                </div>
+                                <br/>
+
+                        <? endwhile;
+
+                    else :
+
+                        // no layouts found
+
+                    endif;
+
+                    ?>
+
+            </div>
+        </div>
+    </section>
+<? endif; ?>
 
 <section class="quoteSection container">
     <div class="row u-centerAlign">
