@@ -285,6 +285,9 @@ a {
   vertical-align: middle;
   width: 100%; }
 
+.align--top {
+  vertical-align: top; }
+
 /* removes inline grid styles for _grid--float.scss full bleed grid */
 .row--float .column {
   display: block !important;

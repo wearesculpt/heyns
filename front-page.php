@@ -34,7 +34,7 @@
     </div>
 </section>
 
-<?php if (the_field('show_flavors') == true): ?>
+<?php if (get_field('show_flavors') == true): ?>
 
     <section class="sectionHead container">
         <div class="row sm_u-centerAlign font--white">
