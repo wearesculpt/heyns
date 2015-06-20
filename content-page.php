@@ -20,11 +20,11 @@
     <div class="row content">
         <a href="<?php the_field('google_maps_link'); ?>" target="_blank"><div class="contactMap imageBackground column" style="background-image: url('<?php the_field('map_image'); ?>');"></div></a>  
 
-        <div class="column size1of1 med_size1of2">
+        <div class="column align--top size1of1 med_size1of2">
             <h3>Find Us!</h3>
             <p><?php the_field('address'); ?></p>
         </div>
-        <div class="column size1of1 med_size1of2">
+        <div class="column align--top size1of1 med_size1of2">
             <h3>Hours</h3>
             <p><?php the_field('hours'); ?></p>
         </div>
