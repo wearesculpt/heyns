@@ -4,7 +4,7 @@
 
 <html>
 <head>
-    <link rel="icon" type="image/png" href="/wp-content/themes/heyns_icecream/resources/images/favicon.png"/>
+    <link rel="icon" type="image/png" href="http://heynsicecream.com/wp-content/uploads/2015/07/favicon.png"/>
     
     <meta charset="UTF-8"/>
     

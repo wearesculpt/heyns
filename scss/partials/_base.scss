@@ -37,8 +37,6 @@ html, body {
 }
 
 header {
-    background-color: white;
-    max-height: 60px;
     padding: 0px 0px !important;
     position: absolute !important;
     right: 0px;
@@ -46,22 +44,19 @@ header {
     z-index: 1000;
     
     .header {
-        height: 60px;
-        background-color: white;
+        height: 100px;
     }
 }
 .mainLogo {
     @include blockRel;
     
-    background-color: white;
-    background-image: url('resources/images/heyns_logo_full.jpg');
+    background-image: url('http://heynsicecream.com/wp-content/uploads/2015/07/heyns_logo_web.png');
     background-size: contain;
     background-position: center;
-    border: 8px solid $primaryColor;
-    border-radius: 1000px;
+    background-repeat: no-repeat;
     height: 90px;
-    margin: 20px 30px;
-    width: 90px;
+    margin: 20px 15px;
+    width: 200px;
     z-index: 0;
 }
 .mainMenu {
@@ -70,12 +65,20 @@ header {
     
     background-color: $primaryColor;
     overflow: hidden;
-    padding: 70px 0px 0px;
-    top: -360px;
+    padding: 20px 0 10px;
+    top: 0;
     right: 0px;
     text-align: right;
     width: 100%;
     z-index:1;
+    transition: transform .3s;
+        -webkit-transition: transform .3s;
+        -moz-transition: transform .3s;
+        -ms-transition: transform .3s;
+    transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
 
     &:after {
         content: '';
@@ -85,14 +88,16 @@ header {
     }
     
     li {
+        height: 100%;
         padding: 20px 0px;
         text-align: center;
         
         a {
             @include h4;
             
-            color: $black;
+            color: white;
             font-family: $font-default;
+            vertical-align: baseline;
         }
     }
     li.current_page_item {
@@ -102,16 +107,20 @@ header {
     }
 }
 .mainMenu--visible {
-    top: -60px;
+    transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
 }
 .js-menuToggle {
     @include blockAb;
     
+    color: white;
     cursor: pointer;
-    font-size: 3rem;
-    margin: 15px 30px;
+    font-size: 6rem;
+    margin: 15px 15px;
     right: 0px;
-    top: 0px;
+    top: 15px;
     z-index: 2;
 }
 

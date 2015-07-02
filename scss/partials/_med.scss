@@ -14,32 +14,42 @@ html, body {
     padding: 15px 0px;
 }
 
+.mainLogo {
+    @include blockRel;
+    
+    background-image: url('http://heynsicecream.com/wp-content/uploads/2015/07/heyns_logo_web.png');
+    background-size: contain;
+    background-position: center;
+    height: 100px;
+    width: 300px;
+    margin: 20px 30px;
+}
+
 .mainMenu {
     @include blockRel;
     @include transThree;
     
-    background-color: rgba(255,255,255,0);
+    height: 100%;
+    background-color: transparent;
     float: right;
     overflow: hidden;
-    padding: 8px 0px 0px;
+    padding: 8px 40px 0px;
     top: 0px;
     right: 0px;
     width: 75%;
     z-index:1;
+    transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
     
     li {
         @include inlineRel;
         
+        line-height: 100px;
         padding: 10px 0px;
         text-align: center;
-        width: 30%;
-        
-        a {
-            @include h4;
-            
-            color: $black;
-            font-family: $font-default;
-        }
+        width: 16%;
     }
     li.current_page_item {
         a {

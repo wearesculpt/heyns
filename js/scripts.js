@@ -77,7 +77,7 @@ $(document).ready(function() {
 var $body = $('body'); 
 var $mainMenu = $(".mainMenu"); 
     
-$body.on('click', '.js-menuToggle',function(){
+$body.on('click', '.js-menuToggle', function(){
     $mainMenu.toggleClass('mainMenu--visible');
 });
     

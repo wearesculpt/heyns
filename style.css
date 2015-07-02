@@ -1628,29 +1628,24 @@ html, body {
   padding: 10px 0px; }
 
 header {
-  background-color: white;
-  max-height: 60px;
   padding: 0px 0px !important;
   position: absolute !important;
   right: 0px;
   top: 0px;
   z-index: 1000; }
   header .header {
-    height: 60px;
-    background-color: white; }
+    height: 100px; }
 
 .mainLogo {
   display: block !important;
   position: relative;
-  background-color: white;
-  background-image: url("resources/images/heyns_logo_full.jpg");
+  background-image: url("http://heynsicecream.com/wp-content/uploads/2015/07/heyns_logo_web.png");
   background-size: contain;
   background-position: center;
-  border: 8px solid #F1658B;
-  border-radius: 1000px;
+  background-repeat: no-repeat;
   height: 90px;
-  margin: 20px 30px;
-  width: 90px;
+  margin: 20px 15px;
+  width: 200px;
   z-index: 0; }
 
 .mainMenu {
@@ -1662,40 +1657,54 @@ header {
   -ms-transition: .3s all;
   background-color: #F1658B;
   overflow: hidden;
-  padding: 70px 0px 0px;
-  top: -360px;
+  padding: 20px 0 10px;
+  top: 0;
   right: 0px;
   text-align: right;
   width: 100%;
-  z-index: 1; }
+  z-index: 1;
+  transition: transform .3s;
+  -webkit-transition: transform .3s;
+  -moz-transition: transform .3s;
+  -ms-transition: transform .3s;
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%); }
   .mainMenu:after {
     content: '';
     display: inline-block;
     position: relative;
     width: 100%; }
   .mainMenu li {
+    height: 100%;
     padding: 20px 0px;
     text-align: center; }
     .mainMenu li a {
       font-size: 1.8rem;
       font-weight: 100;
       line-height: 1.618;
-      color: #222222;
-      font-family: "Bitter", Rockwell, serif; }
+      color: white;
+      font-family: "Bitter", Rockwell, serif;
+      vertical-align: baseline; }
   .mainMenu li.current_page_item a {
     color: white; }
 
 .mainMenu--visible {
-  top: -60px; }
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0); }
 
 .js-menuToggle {
   display: block !important;
   position: absolute;
+  color: white;
   cursor: pointer;
-  font-size: 3rem;
-  margin: 15px 30px;
+  font-size: 6rem;
+  margin: 15px 15px;
   right: 0px;
-  top: 0px;
+  top: 15px;
   z-index: 2; }
 
 .lede {
@@ -1785,17 +1794,6 @@ footer {
     height: 60px;
     padding: 20px 0px; }
 
-  .mainLogo {
-    display: block !important;
-    position: relative;
-    background-color: white;
-    background-image: url("resources/images/heyns_logo_full.jpg");
-    background-size: contain;
-    background-position: center;
-    border-radius: 1000px;
-    height: 160px;
-    width: 160px; }
-
   .lede {
     font-size: 8rem; } }
 @media screen and (min-width: 768px) {
@@ -1810,6 +1808,16 @@ footer {
     height: 60px;
     padding: 15px 0px; }
 
+  .mainLogo {
+    display: block !important;
+    position: relative;
+    background-image: url("http://heynsicecream.com/wp-content/uploads/2015/07/heyns_logo_web.png");
+    background-size: contain;
+    background-position: center;
+    height: 100px;
+    width: 300px;
+    margin: 20px 30px; }
+
   .mainMenu {
     display: block !important;
     position: relative;
@@ -1817,26 +1825,26 @@ footer {
     -moz-transition: .3s all;
     -webkit-transition: .3s all;
     -ms-transition: .3s all;
-    background-color: rgba(255, 255, 255, 0);
+    height: 100%;
+    background-color: transparent;
     float: right;
     overflow: hidden;
-    padding: 8px 0px 0px;
+    padding: 8px 40px 0px;
     top: 0px;
     right: 0px;
     width: 75%;
-    z-index: 1; }
+    z-index: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0); }
     .mainMenu li {
       display: inline-block !important;
       position: relative;
+      line-height: 100px;
       padding: 10px 0px;
       text-align: center;
-      width: 30%; }
-      .mainMenu li a {
-        font-size: 1.8rem;
-        font-weight: 100;
-        line-height: 1.618;
-        color: #222222;
-        font-family: "Bitter", Rockwell, serif; }
+      width: 16%; }
     .mainMenu li.current_page_item a {
       color: #F1658B; }
 

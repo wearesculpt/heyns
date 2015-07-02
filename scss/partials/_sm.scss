@@ -10,17 +10,6 @@ html, body {
     height: 60px;
     padding: 20px 0px;
 }
-.mainLogo {
-    @include blockRel;
-    
-    background-color: white;
-    background-image: url('resources/images/heyns_logo_full.jpg');
-    background-size: contain;
-    background-position: center;
-    border-radius: 1000px;
-    height: 160px;
-    width: 160px;
-}
 
 ////MAIN
 .lede {
