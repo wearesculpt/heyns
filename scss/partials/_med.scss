@@ -13,11 +13,10 @@ html, body {
     height: 60px;
     padding: 15px 0px;
 }
-
 .mainLogo {
     @include blockRel;
     
-    background-image: url('/wp-content/themes/heyns_icecream/resources/images/heyns_logo_web.png');
+    // background-image: url('/wp-content/themes/heyns_icecream/resources/images/heyns_logo_web.png');
     background-size: contain;
     background-position: center;
     height: 100px;
@@ -49,11 +48,16 @@ html, body {
         line-height: 100px;
         padding: 10px 0px;
         text-align: center;
-        width: 16%;
+        min-width: 15%;
+        margin-left: 15px;
+        a {
+            color: $primaryColor;
+        }
     }
     li.current_page_item {
         a {
             color: $primaryColor;
+            text-decoration: underline;
         }
     }
 }

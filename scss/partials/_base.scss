@@ -50,7 +50,6 @@ header {
 .mainLogo {
     @include blockRel;
     
-    background-image: url('/wp-content/themes/heyns_icecream/resources/images/heyns_logo_web.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,6 +102,7 @@ header {
     li.current_page_item {
         a {
             color: white;
+            text-decoration: underline;
         }
     }
 }

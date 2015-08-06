@@ -1639,7 +1639,6 @@ header {
 .mainLogo {
   display: block !important;
   position: relative;
-  background-image: url("/wp-content/themes/heyns_icecream/resources/images/heyns_logo_web.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1688,7 +1687,8 @@ header {
       font-family: "Bitter", Rockwell, serif;
       vertical-align: baseline; }
   .mainMenu li.current_page_item a {
-    color: white; }
+    color: white;
+    text-decoration: underline; }
 
 .mainMenu--visible {
   transform: translateY(0);
@@ -1811,7 +1811,6 @@ footer {
   .mainLogo {
     display: block !important;
     position: relative;
-    background-image: url("/wp-content/themes/heyns_icecream/resources/images/heyns_logo_web.png");
     background-size: contain;
     background-position: center;
     height: 100px;
@@ -1844,9 +1843,13 @@ footer {
       line-height: 100px;
       padding: 10px 0px;
       text-align: center;
-      width: 16%; }
+      min-width: 15%;
+      margin-left: 15px; }
+      .mainMenu li a {
+        color: #F1658B; }
     .mainMenu li.current_page_item a {
-      color: #F1658B; }
+      color: #F1658B;
+      text-decoration: underline; }
 
   .mainMenu--visible {
     top: 0px; }

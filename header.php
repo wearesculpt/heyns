@@ -58,7 +58,9 @@
         
         <div class="header row row--fullWidth">
             <div class="column size1of4">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><div class="mainLogo"></div></a>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <div class="mainLogo" style="background-image:url('<?php echo get_template_directory_uri(); ?>/resources/images/heyns_logo_web.png');"></div>
+                </a>
             </div>
             <div class="js-menuToggle"><i class="fa fa-reorder fa-fw"></i></div>
             
